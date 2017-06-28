@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
+import { Link } from "react-router";
 class Home extends Component {
  
     render(){
@@ -11,8 +11,12 @@ class Home extends Component {
                     <div className="col-lg-12 col-md-12 col-sm-12 br-lblue workpanel">
 
                         <h1>How it Works</h1>
-                    </div>
-            </div>
+
+                        <button>
+                            <Link  to="/signup">Sign up</Link>
+                        </button>
+                                            </div>
+            </div> 
         )
     }
 

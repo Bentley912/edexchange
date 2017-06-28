@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    var Helptype = sequelize.define("Helptype", {
+    var EdRequest = sequelize.define("EdRequest", {
 
-        type: {
+        description: {
             type: DataTypes.STRING
         },
 
@@ -10,14 +10,18 @@ module.exports = function(sequelize, DataTypes) {
         classMethods: {
             associate: function(models) {
 
-                Helptype.belongsTo(models.Expert, {
+                EdRequest.belongsTo(models.Educator, {
                     foreignKey: {
                         allowNull: false
                     }
+                });
+
+                 EdRequest.hasOne(models.Helptype, {
+                    onDelete: "cascade"
                 });
                
             }
         }
     });
-    return Helptype;
+    return EdRequest;
     };

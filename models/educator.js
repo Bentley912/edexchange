@@ -20,6 +20,18 @@ module.exports = function(sequelize, DataTypes){
             type:DataTypes.STRING,
             allowNull:false
         }
+    },{
+
+         classMethods: {
+            associate: function(models) {
+
+                Educator.hasMany(models.EdReqeust, {
+                    onDelete: "cascade"
+                });
+
+            }
+   
+         }
     })
     return Educator;
 }

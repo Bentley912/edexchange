@@ -1,15 +1,16 @@
 
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Home from "./Home"
-import Navbar from "./common/Navbar";
+import Navbar from "./common/Navbar"
+
 
 class Main extends Component {
 render(){
     return(
        <div>
-            <Navbar />
-           <Home />
+           <Navbar />
+        {this.props.children}
+
        </div>
     );
 }

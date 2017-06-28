@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Helptype = sequelize.define("Helptype", {
+    var Skill = sequelize.define("Skill", {
 
         type: {
             type: DataTypes.STRING
@@ -10,7 +10,13 @@ module.exports = function(sequelize, DataTypes) {
         classMethods: {
             associate: function(models) {
 
-                Helptype.belongsTo(models.Expert, {
+                Skill.belongsTo(models.Expert, {
+                    foreignKey: {
+                        allowNull: false
+                    }
+                });
+
+                Skill.belongsTo(models.EdRequest, {
                     foreignKey: {
                         allowNull: false
                     }
@@ -19,5 +25,5 @@ module.exports = function(sequelize, DataTypes) {
             }
         }
     });
-    return Helptype;
+    return Skill;
     };
