@@ -10,7 +10,7 @@ module.exports = {
       password: req.body.password
     }).then(function() {
     //   res.redirect(307, "/api/login");
-    console.log("User Created!")
+    console.log("User Created!") 
     }).catch(function(err) {
       res.json(err);
     });
