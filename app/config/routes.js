@@ -4,6 +4,7 @@ import Main from "../components/Main";
 import Home from "../components/Home"
 import Signup from "../components/Signup"
 import Login from "../components/Login"
+import Member from "../components/Member"
 
 
 const routes = (
@@ -12,6 +13,7 @@ const routes = (
         <IndexRoute component={Home} />
        <Route path="signup" component={Signup} />
        <Route path="login" component={Login} />
+       <Route path="member" component={Member} />
     </Route>
   </Router>
 );
