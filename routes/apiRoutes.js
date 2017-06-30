@@ -6,4 +6,5 @@ var router = new express.Router();
 
 router.post("/signup", authController.create);
 
+
 module.exports = router;
