@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes){
 
          classMethods: {
             associate: function(models) {
-                Educator.hasMany(models.EdReqeust, {
+                Educator.hasMany(models.EdRequest, {
                     onDelete: "cascade"
                 });
 

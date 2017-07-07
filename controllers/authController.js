@@ -18,7 +18,7 @@ module.exports = {
     },
 
     login: function(req,res){
-      res.json("/members");
+      res.redirect("/member");
     },
 
     userData: function(req,res){
