@@ -21,10 +21,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(__dirname + "/public"));
-
+app.use("/", routes);
 
 require("./routes/html-routes.js")(app);
 require("./routes/apiRoutes.js")(app);
+
+
 
 db.sequelize.sync({}).then(function() {
 

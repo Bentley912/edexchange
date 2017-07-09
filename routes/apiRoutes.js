@@ -26,6 +26,8 @@ module.exports = function(app) {
       res.json(err);
     });
   });
+
+  
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
@@ -46,6 +48,8 @@ module.exports = function(app) {
       });
     }
   });
+
+
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });

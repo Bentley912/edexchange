@@ -6,9 +6,9 @@ import Main from "../components/Main"
 
 const routes = (
   <Router history={browserHistory}>
-    <Route path="/" component={}>
+    <Route path="/" component={Main}>
       <Route path="edProfile" component={EdProfile} />
-      <IndexRoute component={Home} />
+     
     </Route>
   </Router>
 );
