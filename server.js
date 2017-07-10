@@ -11,22 +11,16 @@ var passport = require("./config/passport");
 var PORT = process.env.PORT || 3000;
 
 var app = express();
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
+app.use(express.static(__dirname + "/public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(express.static(__dirname + "/public"));
 app.use("/", routes);
-
 require("./routes/html-routes.js")(app);
 require("./routes/apiRoutes.js")(app);
-
-
 
 db.sequelize.sync({}).then(function() {
 
