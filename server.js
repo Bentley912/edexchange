@@ -20,7 +20,7 @@ app.use(passport.session());
 
 app.use("/", routes);
 require("./routes/html-routes.js")(app);
-require("./routes/apiRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);  
 
 db.sequelize.sync({}).then(function() {
 
