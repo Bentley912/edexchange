@@ -2,13 +2,14 @@ import axios from "axios";
 
 const API = {
 
-    postProfile: function(newQuote){
-    return axios.post("/api/edProfile", { newQuote });
+    postProfile: function(newEducator){
+    return axios.post("/api/edProfile", { newEducator });
     },
 
     getProfile: function (){
         return axios.get("api/profile");
     }
+
 };
 
 

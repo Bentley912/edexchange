@@ -20,7 +20,7 @@ class edModal extends React.Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+        <Button color="danger" onClick={this.toggle}>Toggle Buttong</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
@@ -35,6 +35,7 @@ class edModal extends React.Component {
     );
  
   }
+
 }
 
 export default edModal;
