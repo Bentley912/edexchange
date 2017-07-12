@@ -215,6 +215,10 @@ strong{
 	background:#444;
 }
 
+.right-button{
+	float:right;
+}
+
 /* Social CSS */
 
 .social a i{
