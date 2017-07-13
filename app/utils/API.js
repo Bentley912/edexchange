@@ -8,6 +8,10 @@ const API = {
 
     getProfile: function (){
         return axios.get("api/profile");
+    },
+
+    postRequest: function(edRequest){
+        return axios.post("api/edRequest", {edRequest});
     }
 
 };

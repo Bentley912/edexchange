@@ -2,8 +2,14 @@ module.exports = function(sequelize, DataTypes) {
     var EdRequest = sequelize.define("EdRequest", {
 
         description: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING, 
         },
+        skill:{
+            type:DataTypes.STRING
+        },
+        type:{
+            type:DataTypes.STRING
+        }
 
     }, {
 
@@ -16,9 +22,9 @@ module.exports = function(sequelize, DataTypes) {
                     }
                 });
 
-                 EdRequest.hasOne(models.Helptype, {
-                    onDelete: "cascade"
-                });
+                //  EdRequest.hasOne(models.Helptype, {
+                //     onDelete: "cascade"
+                // });
                
             }
         }
