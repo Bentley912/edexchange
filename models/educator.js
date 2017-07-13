@@ -8,14 +8,6 @@ module.exports = function(sequelize, DataTypes){
         type:DataTypes.STRING,
         allowNull:false
         },
-        email: {
-            type:DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len:[1,25],
-                isEmail:true
-            }
-        },
         school: {
             type:DataTypes.STRING,
             allowNull:false
@@ -24,13 +16,20 @@ module.exports = function(sequelize, DataTypes){
 
          classMethods: {
             associate: function(models) {
-                Educator.hasMany(models.EdReqeust, {
+                Educator.hasMany(models.EdRequest, {
                     onDelete: "cascade"
                 });
-
+                Educator.belongsTo(models.User, {
+                        foreignKey: {
+                            allowNull: false
+                        }
+                    });
             }
-   
+            
          }
-    })
+    
+ }
+    
+    )
     return Educator;
 }
