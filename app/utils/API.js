@@ -15,7 +15,7 @@ const API = {
     },
 
     postExpertProfile: function(newExpert){
-        return axios.post("api/expert", {newExpert});
+        return axios.post("/api/expert", {newExpert});
     }
 
 };

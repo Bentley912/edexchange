@@ -45,6 +45,7 @@ module.exports = {
     },
 
     createExpert: function(req,res){
+        console.log(req.body);
         db.Expert.create({
                     firstname: req.body.newExpert.fnameValue,
                     lastname: req.body.newExpert.lnameValue,

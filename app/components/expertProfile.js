@@ -10,7 +10,7 @@ export default class expertProfile extends React.Component {
              fnameValue: "",
              lnameValue: "",
              emailValue: "",
-             skilllValue:"",
+             skillValue:"",
              descrValue: "" 
          };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,10 +29,10 @@ export default class expertProfile extends React.Component {
         this.setState({ lnameValue: event.target.value });
     }
     handleEmailChange(event) {
-        this.setState({ emaillValue: event.target.value });
+        this.setState({ emailValue: event.target.value });
     }
      handleSkillChange(event) {
-        this.setState({ skilllValue: event.target.value });
+        this.setState({ skillValue: event.target.value });
     }
 
       handleDescrChange(event) {
@@ -48,7 +48,7 @@ export default class expertProfile extends React.Component {
             descrValue:this.state.descrValue
         }
 
-        // API.postExpertProfile(newExpert);
+         API.postExpertProfile(newExpert);
         console.log(newExpert);
     }
         render() {
@@ -69,7 +69,7 @@ export default class expertProfile extends React.Component {
                         </FormGroup>  
                         <FormGroup>
                         <Label for="school">Email</Label>
-                        <Input type="email" name="school" id="schoolname" placeholder="Email" onChange={this.handleEmaillChange} value={this.state.emaillValue}/>
+                        <Input type="email" name="school" id="schoolname" placeholder="Email" onChange={this.handleEmailChange} value={this.state.emailValue}/>
                         </FormGroup>
                          <FormGroup>
                         <Label for="lastname">Skill</Label>
