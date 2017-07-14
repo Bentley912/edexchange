@@ -6,6 +6,8 @@ import Profile from "../components/Profile";
 import edModal from "../components/edModal";
 import edRequest from "../components/edRequest";
 import expertProfile from "../components/expertProfile";
+import exPage from "../components/exPage";
+import Helptype from "../components/Helptype";
 
 const routes = (
   <Router history={browserHistory}>
@@ -15,6 +17,8 @@ const routes = (
       <Route path="edModal" component={edModal} />
       <Route path="edRequest" component={edRequest} />
       <Route path="expertProfile" component={expertProfile} />
+      <Route path="exPage" component={exPage} />
+      <Route path="Helptype" component={Helptype} />
     </Route>
   </Router>
 );

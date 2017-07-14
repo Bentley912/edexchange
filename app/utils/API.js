@@ -3,7 +3,7 @@ import axios from "axios";
 const API = {
 
     postProfile: function(newEducator){
-    return axios.post("/api/edProfile", { newEducator });
+        return axios.post("/api/edProfile", { newEducator });
     },
 
     getProfile: function (){
@@ -16,6 +16,10 @@ const API = {
 
     postExpertProfile: function(newExpert){
         return axios.post("/api/expert", {newExpert});
+    },
+
+    getExProfile: function (){
+        return axios.get("api/exProfile");
     }
 
 };

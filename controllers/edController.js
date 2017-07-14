@@ -59,5 +59,13 @@ module.exports = {
                 }).catch(function(err){
                     console.log(err);
                 })
+    },
+
+    exProfile: function(req,res){
+        db.Expert.findOne({
+                where: { UserId: req.user.id }
+            }).then(function(data) {
+                res.json(data);
+            });
     }
 };
