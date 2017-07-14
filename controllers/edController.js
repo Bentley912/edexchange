@@ -30,6 +30,7 @@ module.exports = {
 
     edRequest: function(req,res){
         
+        
           db.EdRequest.create({
                 description: req.body.edRequest.description,
                 skill: req.body.edRequest.skill,
@@ -41,5 +42,21 @@ module.exports = {
             }).catch(function(err){
                 console.log(err);
             })
+    },
+
+    createExpert: function(req,res){
+        db.Expert.create({
+                    firstname: req.body.newExpert.fnameValue,
+                    lastname: req.body.newExpert.lnameValue,
+                    email: req.body.newExpert.emailValue,
+                    skill: req.body.newExpert.skillValue,
+                    description:req.body.newExpert.descrValue,
+                    UserId: req.user.id
+                }).then(function(data) {
+                    console.log("Expert Created");
+                    res.redirect("/profile");
+                }).catch(function(err){
+                    console.log(err);
+                })
     }
 };

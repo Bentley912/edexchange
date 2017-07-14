@@ -12,6 +12,10 @@ const API = {
 
     postRequest: function(edRequest){
         return axios.post("api/edRequest", {edRequest});
+    },
+
+    postExpertProfile: function(newExpert){
+        return axios.post("api/expert", {newExpert});
     }
 
 };

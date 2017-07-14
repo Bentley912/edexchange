@@ -16,6 +16,9 @@ module.exports = function(sequelize, DataTypes){
                 isEmail:true
             }
         },
+        skill:{
+            type:DataTypes.STRING
+        },
         description: {
             type:DataTypes.STRING,
             allowNull:false

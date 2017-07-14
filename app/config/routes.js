@@ -5,6 +5,7 @@ import Main from "../components/Main"
 import Profile from "../components/Profile";
 import edModal from "../components/edModal";
 import edRequest from "../components/edRequest";
+import expertProfile from "../components/expertProfile";
 
 const routes = (
   <Router history={browserHistory}>
@@ -13,6 +14,7 @@ const routes = (
       <Route path="Profile" component={Profile} />
       <Route path="edModal" component={edModal} />
       <Route path="edRequest" component={edRequest} />
+      <Route path="expertProfile" component={expertProfile} />
     </Route>
   </Router>
 );

@@ -7,5 +7,5 @@ var router = new express.Router();
 router.post("/edProfile", edController.edcreate);
 router.get("/profile", edController.edProfile);
 router.post("/edRequest", edController.edRequest);
-
+router.post("/expert", edController.createExpert);
 module.exports = router;
