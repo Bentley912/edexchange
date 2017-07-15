@@ -5,7 +5,6 @@ module.exports = {
 
     edcreate: function(req,res){
         console.log(req.body.newEducator.fnameValue);
-
                 db.Educator.create({
                     firstname: req.body.newEducator.fnameValue,
                     lastname: req.body.newEducator.lnameValue,
@@ -16,8 +15,7 @@ module.exports = {
                     res.redirect("/profile");
                 }).catch(function(err){
                     console.log(err);
-                })
-        
+                }) 
     },
 
     edProfile: function(req,res){
@@ -30,6 +28,7 @@ module.exports = {
 
     edRequest: function(req,res){
         
+        
           db.EdRequest.create({
                 description: req.body.edRequest.description,
                 skill: req.body.edRequest.skill,
@@ -37,6 +36,43 @@ module.exports = {
                 EducatorId: req.body.edRequest.EducatorId
             }).then(function(data) {
                 console.log("Request Created");
+                 res.redirect("/profile");
+            }).catch(function(err){
+                console.log(err);
+            })
+    },
+
+    createExpert: function(req,res){
+        console.log(req.body);
+        db.Expert.create({
+                    firstname: req.body.newExpert.fnameValue,
+                    lastname: req.body.newExpert.lnameValue,
+                    email: req.body.newExpert.emailValue,
+                    skill: req.body.newExpert.skillValue,
+                    description:req.body.newExpert.descrValue,
+                    UserId: req.user.id
+                }).then(function(data) {
+                    console.log("Expert Created");
+                    res.redirect("/profile");
+                }).catch(function(err){
+                    console.log(err);
+                })
+    },
+
+    exProfile: function(req,res){
+        db.Expert.findOne({
+                where: { UserId: req.user.id }
+            }).then(function(data) {
+                res.json(data);
+            });
+    },
+    
+    helpTypeCreate: function(req,res){
+        db.Helptype.create({
+                type: req.body.Helptype.description,
+                ExpertId: req.body.Helptype.ExpertId
+            }).then(function(data) {
+                console.log("Helptype Created");
                  res.redirect("/profile");
             }).catch(function(err){
                 console.log(err);
