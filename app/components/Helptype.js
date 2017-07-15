@@ -35,16 +35,15 @@ export default class Helpytype extends React.Component {
     
 
     handleClick(){
-        const Helptype = {
-            type:this.state.description
+        const helpType = {
+            type:this.state.description,
+            ExpertId: this.state.info.id
         }
-        console.log(Helptype);
+        console.log(helpType);
 
-        API.postHelpType(Helptype);
+        API.postHelpType(helpType);
     }
 
-    
-    
     render(){
         return(
             <div className="container">

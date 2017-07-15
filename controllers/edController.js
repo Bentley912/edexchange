@@ -15,8 +15,7 @@ module.exports = {
                     res.redirect("/profile");
                 }).catch(function(err){
                     console.log(err);
-                })
-        
+                }) 
     },
 
     edProfile: function(req,res){
@@ -70,7 +69,8 @@ module.exports = {
     
     helpTypeCreate: function(req,res){
         db.Helptype.create({
-                type: req.body.description    
+                type: req.body.Helptype.description,
+                ExpertId: req.body.Helptype.ExpertId
             }).then(function(data) {
                 console.log("Helptype Created");
                  res.redirect("/profile");

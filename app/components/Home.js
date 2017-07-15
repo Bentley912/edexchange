@@ -6,13 +6,13 @@ class Home extends Component {
     render(){
         return(
             <div className ="container">
-                <h1>Home Page Content</h1>
+                
 
-                    <div className="col-lg-12 col-md-12 col-sm-12 br-lblue workpanel">
+                    <div className="col-lg-12 col-md-12 col-sm-12 banner white">
 
-                        <h1>How it Works</h1>
-
-                        <button>
+                        <h1 className="white">Welcome to the Education Exchange</h1>
+                        <h1 className="white">Where Professionals Connect with Educators</h1>
+                        <button className = "btn btn-large">
                             <Link  to="/signup">Sign up</Link>
                         </button>
                                             </div>

@@ -23,7 +23,7 @@ const API = {
     },
 
     postHelpType: function(){
-        return axios.post("/api/helptype");
+        return axios.post("/api/helptype", {helpType});
     }
 
 };

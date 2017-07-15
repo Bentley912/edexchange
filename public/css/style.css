@@ -7,16 +7,45 @@ Designed by : http://responsivewebinc.com
 /* Basic CSS starts */
 
 body{
-	background:#222;
-	font-family: 'Open Sans', sans-serif;
+	background:#09f;
+	font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;;
 	font-size:17px;
 	-webkit-font-smoothing: antialiased;
-	font-weight:400;
+	font-weight:800;
 }
 
+.banner{
+	color:white;
+	background:
+	url('../images/teachers.png');
+	background-size:cover;
+	text-align: center;
+ 	 background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	height:25em;
+}
+
+	.btn-round-lg{
+	border-radius: 22.5px;
+	}
+	.btn-round{
+	border-radius: 17px;
+	}
+	.btn-round-sm{
+	border-radius: 15px;
+	}
+	.btn-round-xs{
+	border-radius: 11px;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+
+
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Open Sans', sans-serif;
-	font-weight:400;
+	font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;;
+	font-weight:800;
 }
 
 p{
