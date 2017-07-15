@@ -20,6 +20,10 @@ const API = {
 
     getExProfile: function (){
         return axios.get("api/exProfile");
+    },
+
+    postHelpType: function(){
+        return axios.post("/api/helptype");
     }
 
 };

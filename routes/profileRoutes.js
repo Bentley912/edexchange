@@ -9,4 +9,5 @@ router.get("/profile", edController.edProfile);
 router.post("/edRequest", edController.edRequest);
 router.post("/expert", edController.createExpert);
 router.get("/exProfile", edController.exProfile);
+router.post("/helptype", edController.helpTypeCreate);
 module.exports = router;

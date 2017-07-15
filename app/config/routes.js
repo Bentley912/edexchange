@@ -18,7 +18,7 @@ const routes = (
       <Route path="edRequest" component={edRequest} />
       <Route path="expertProfile" component={expertProfile} />
       <Route path="exPage" component={exPage} />
-      <Route path="Helptype" component={Helptype} />
+      <Route path="Helptype" component={Helptype} />  
     </Route>
   </Router>
 );

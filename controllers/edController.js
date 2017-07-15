@@ -5,7 +5,6 @@ module.exports = {
 
     edcreate: function(req,res){
         console.log(req.body.newEducator.fnameValue);
-
                 db.Educator.create({
                     firstname: req.body.newEducator.fnameValue,
                     lastname: req.body.newEducator.lnameValue,
@@ -67,5 +66,16 @@ module.exports = {
             }).then(function(data) {
                 res.json(data);
             });
+    },
+    
+    helpTypeCreate: function(req,res){
+        db.Helptype.create({
+                type: req.body.description    
+            }).then(function(data) {
+                console.log("Helptype Created");
+                 res.redirect("/profile");
+            }).catch(function(err){
+                console.log(err);
+            })
     }
 };
