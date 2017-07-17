@@ -68,14 +68,15 @@ module.exports = {
     },
     
     helpTypeCreate: function(req,res){
-        db.Helptype.create({
-                type: req.body.Helptype.description,
-                ExpertId: req.body.Helptype.ExpertId
-            }).then(function(data) {
-                console.log("Helptype Created");
-                 res.redirect("/profile");
-            }).catch(function(err){
-                console.log(err);
-            })
+        console.log(req.body);
+        // db.Helptype.create({
+        //         type: req.body.description,
+        //         ExpertId: req.body.ExpertId
+        //     }).then(function(data) {
+        //         console.log("Helptype Created");
+        //          res.redirect("/profile");
+        //     }).catch(function(err){
+        //         console.log(err);
+        //     })
     }
 };
