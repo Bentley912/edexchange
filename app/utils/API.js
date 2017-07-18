@@ -22,7 +22,7 @@ const API = {
         return axios.get("api/exProfile");
     },
 
-    postHelpType: function(){
+   postHelpType: function(helpType){
         return axios.post("/api/helptype", {helpType});
     }
 
