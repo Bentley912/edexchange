@@ -12,6 +12,7 @@ module.exports = {
                     UserId: req.user.id
                 }).then(function(data) {
                     console.log("Educator Created");
+                 }).then(function(data) {
                     res.redirect("/profile");
                 }).catch(function(err){
                     console.log(err);
@@ -78,5 +79,13 @@ module.exports = {
             }).catch(function(err){
                 console.log(err);
             })
+    },
+
+    helpTypeRequest: function(req,res){
+        console.log(req.body);
     }
+
+   
+
+    
 };

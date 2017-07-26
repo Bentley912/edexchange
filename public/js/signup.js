@@ -12,9 +12,7 @@ $(document).ready(function() {
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
-      lastname: lastnameInput.val().trim(),
-      firstname: firstnameInput.val().trim(),
-      school: schoolInput.val().trim()
+     
     };
     if (!userData.email || !userData.password) {
       return;

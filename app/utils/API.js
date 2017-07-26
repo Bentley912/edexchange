@@ -24,7 +24,12 @@ const API = {
 
    postHelpType: function(helpType){
         return axios.post("/api/helptype", {helpType});
+    },
+
+    getHelpType: function(){
+        return axios.get("api/helptype");
     }
+
 
 };
 

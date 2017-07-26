@@ -44,7 +44,7 @@ export default class Helpytype extends React.Component {
         API.postHelpType(helpType);
     }
 
-    render(){
+    render(){   
         return(
             <div className="container">
                 <h1> This is the Helptype Page</h1>

@@ -9,6 +9,7 @@ import edRequest from "../components/edRequest";
 import expertProfile from "../components/expertProfile";
 import exPage from "../components/exPage";
 import Helptype from "../components/Helptype";
+import All from "../components/All";
 
 const routes = (
   <Router history={browserHistory}>
@@ -21,6 +22,7 @@ const routes = (
       <Route path="expertProfile" component={expertProfile} />
       <Route path="exPage" component={exPage} />
       <Route path="Helptype" component={Helptype} />  
+      <Route path="All" component={All} />  
     </Route>
   </Router>
 );

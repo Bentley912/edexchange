@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import API from "../utils/API";
+import ExpertPanel from "./common/ExpertPanel.js";
 
 
 export default class exPage extends React.Component {
@@ -42,8 +43,8 @@ export default class exPage extends React.Component {
                             <div className="col-sm-12">
                                 <div className="col-xs-12 col-sm-8">
                                     
-                                            <a href="#" class="thumbnail">
-                                            <img src="..." alt="..." />
+                                            <a href="" class="thumbnail">
+                                            <img src="/images/feamleUser.png" alt="..." />
                                             </a>
                                      
                                     <h2>{this.state.info.firstname} {this.state.info.lastname}</h2>
@@ -80,16 +81,7 @@ export default class exPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                    <div className="well well-lgm text-center">
-                        <h2> Dashboard</h2>
-                        <div className="row">
-                            <div className="col-md-4 col-lg-4 col-sm-4 col-xs-4 br-lblue">
-                                <Button>Search for Educators</Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ExpertPanel EducatorId = {this.state.info.id}/>
                 
             </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import API from "../utils/API";
+import { Link } from "react-router";
 
 
 export default class edProfile extends React.Component {
@@ -62,7 +63,9 @@ export default class edProfile extends React.Component {
                             Please choose a profile Pic. 
                         </FormText>
                         </FormGroup>        
-                        <Button onClick={this.handleButtonClick}>Submit</Button>
+                        <Button onClick={this.handleButtonClick}>Submit
+                            <Link to="/profile"></Link>
+                        </Button>
                     </Form>
                 </div>
             );
